@@ -7,6 +7,7 @@ import FeaturesSection from "@/components/FeaturesSection";
 import TVRemoteSection from "@/components/TVRemoteSection";
 import DemoSection from "@/components/DemoSection";
 import ProFeaturesSection from "@/components/ProFeaturesSection";
+import PowerToolsSection from "@/components/PowerToolsSection";
 import QuickStartSection from "@/components/QuickStartSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import CTASection from "@/components/CTASection";
@@ -22,6 +23,7 @@ export default function Home() {
         <TVRemoteSection />
         <DemoSection />
         <ProFeaturesSection />
+        <PowerToolsSection />
         <QuickStartSection />
         <TestimonialsSection />
         <CTASection />

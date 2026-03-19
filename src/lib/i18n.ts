@@ -122,6 +122,59 @@ export const translations = {
           "Vollst\u00e4ndige Turnier-Historie mit Spielerstatistiken. Tracke Gewinne, Platzierungen und Entwicklung.",
       },
     },
+    powerTools: {
+      label: "PROFI-WERKZEUGE",
+      title: "Mehr Power unter der Haube",
+      subtitle: "Fortgeschrittene Tools für Turnierleiter, die keine Kompromisse machen.",
+      sidePot: {
+        title: "Side Pot Calculator",
+        description: "Interaktiver Rechner für Multi-Way All-In Situationen. Automatische Berechnung von Haupt- und Nebenpots mit Gewinner-Zuweisung.",
+      },
+      icm: {
+        title: "ICM-Rechner",
+        description: "Independent Chip Model Berechnung für faire Turnierequity. Deal-Verhandlungen auf professionellem Niveau.",
+      },
+      payoutSim: {
+        title: "Auszahlungs-Simulator",
+        description: "Dynamische Payout-Vorschau per Slider. Simuliere Auszahlungen basierend auf verbleibenden Spielern in Echtzeit.",
+      },
+      bounty: {
+        title: "Bounty & Mystery Bounty",
+        description: "Kopfgeld-Turniere mit Mystery-Bounty-Unterstützung. Automatische Bounty-Berechnung und Tracking.",
+      },
+      multiTable: {
+        title: "Multi-Table Support",
+        description: "Verwalte mehrere Tische gleichzeitig. Automatische Tischauflösung und Spieler-Umverteilung.",
+      },
+      autoSave: {
+        title: "Auto-Save & Resume",
+        description: "Turniere werden automatisch gespeichert. Browser-Absturz? Kein Problem — einfach dort weitermachen wo du aufgehört hast.",
+      },
+      tournamentLog: {
+        title: "Turnier-Log",
+        description: "Echtzeit-Eventprotokoll mit Filtern. Eliminierungen, Rebuys, Level-Wechsel — alles dokumentiert und kopierbar.",
+      },
+      themes: {
+        title: "Themes & Hintergründe",
+        description: "7+ Akzentfarben und 9 Hintergrundbilder — von Casino-Filz bis Dark Wood. Mach die App zu deiner.",
+      },
+      casting: {
+        title: "AirPlay & Chromecast",
+        description: "Streame den Timer kabellos auf jeden Bildschirm. Unterstützt AirPlay, Google Cast und HDMI.",
+      },
+      handForHand: {
+        title: "Hand-for-Hand",
+        description: "Bubble-Play Modus für synchrones Spielen an allen Tischen. Fair und professionell.",
+      },
+      lateReg: {
+        title: "Late Registration",
+        description: "Nachträgliche Anmeldung mit konfigurierbarem Zeitfenster. Automatische Prizepool-Anpassung.",
+      },
+      guidedTour: {
+        title: "Einführungstour",
+        description: "Interaktiver 5-Schritte Walkthrough für Erstnutzer. Setup-Wizard für schnelle Konfiguration.",
+      },
+    },
     demo: {
       label: "SO FUNKTIONIERT'S",
       title: "In 3 Schritten zum perfekten Turnier",
@@ -334,6 +387,59 @@ export const translations = {
         title: "History & Statistics",
         description:
           "Complete tournament history with player statistics. Track wins, placements and development.",
+      },
+    },
+    powerTools: {
+      label: "POWER TOOLS",
+      title: "More power under the hood",
+      subtitle: "Advanced tools for tournament directors who don't compromise.",
+      sidePot: {
+        title: "Side Pot Calculator",
+        description: "Interactive calculator for multi-way all-in situations. Automatic calculation of main and side pots with winner assignment.",
+      },
+      icm: {
+        title: "ICM Calculator",
+        description: "Independent Chip Model calculation for fair tournament equity. Deal negotiations at a professional level.",
+      },
+      payoutSim: {
+        title: "Payout Simulator",
+        description: "Dynamic payout preview with slider. Simulate payouts based on remaining players in real-time.",
+      },
+      bounty: {
+        title: "Bounty & Mystery Bounty",
+        description: "Bounty tournaments with mystery bounty support. Automatic bounty calculation and tracking.",
+      },
+      multiTable: {
+        title: "Multi-Table Support",
+        description: "Manage multiple tables simultaneously. Automatic table balancing and player redistribution.",
+      },
+      autoSave: {
+        title: "Auto-Save & Resume",
+        description: "Tournaments are saved automatically. Browser crash? No problem — just continue where you left off.",
+      },
+      tournamentLog: {
+        title: "Tournament Log",
+        description: "Real-time event log with filters. Eliminations, rebuys, level changes — everything documented and copyable.",
+      },
+      themes: {
+        title: "Themes & Backgrounds",
+        description: "7+ accent colors and 9 background images — from casino felt to dark wood. Make the app yours.",
+      },
+      casting: {
+        title: "AirPlay & Chromecast",
+        description: "Stream the timer wirelessly to any screen. Supports AirPlay, Google Cast and HDMI.",
+      },
+      handForHand: {
+        title: "Hand-for-Hand",
+        description: "Bubble play mode for synchronized play at all tables. Fair and professional.",
+      },
+      lateReg: {
+        title: "Late Registration",
+        description: "Late registration with configurable time window. Automatic prize pool adjustment.",
+      },
+      guidedTour: {
+        title: "Guided Tour",
+        description: "Interactive 5-step walkthrough for first-time users. Setup wizard for quick configuration.",
       },
     },
     demo: {
