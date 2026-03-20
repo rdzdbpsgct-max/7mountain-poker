@@ -58,18 +58,27 @@ export default function DatenschutzPage() {
         </Section>
 
         <Section title="3. Welche Daten werden erhoben?">
-          <h3 className="text-base font-semibold text-foreground/90 mt-4 mb-2">3.1 Server-Logfiles (Hosting durch Vercel)</h3>
+          <h3 className="text-base font-semibold text-foreground/90 mt-4 mb-2">3.1 Hosting und Server-Logfiles</h3>
           <p>
             Diese Website wird über die Hosting-Plattform <strong>Vercel</strong>{" "}
-            (Vercel Inc., 340 Pine Street, Suite 701, San Francisco, CA 94104, USA)
-            bereitgestellt. Bei jedem Seitenaufruf protokolliert Vercels Infrastruktur
-            automatisch technische Zugriffsdaten in sogenannten Server-Logfiles:
+            (Vercel Inc., 340 S Lemon Ave #4133, Walnut, CA 91789, USA)
+            bereitgestellt. Vercel fungiert als <strong>Auftragsverarbeiter</strong> gemäß
+            Art. 28 DSGVO. Es besteht ein Auftragsverarbeitungsvertrag (Data Processing
+            Addendum):{" "}
+            <a href="https://vercel.com/legal/dpa" target="_blank" rel="noopener" className="text-emerald hover:underline">
+              vercel.com/legal/dpa
+            </a>.
+          </p>
+          <p className="mt-2">
+            Bei jedem Seitenaufruf protokolliert Vercels Infrastruktur automatisch
+            technische Zugriffsdaten in sogenannten Server-Logfiles:
           </p>
           <div className="flex flex-wrap gap-2 my-4">
             {[
-              "IP-Adresse (anonymisiert)",
+              "IP-Adresse",
               "Datum und Uhrzeit des Abrufs",
               "Aufgerufene URL",
+              "Referrer-URL",
               "Browsertyp und -version",
               "Betriebssystem",
               "HTTP-Statuscode",
@@ -97,12 +106,16 @@ export default function DatenschutzPage() {
             </a>.
           </p>
           <p className="mt-2">
-            <strong>Drittlandtransfer (USA):</strong> Vercel Inc. hat seinen Sitz in den USA.
-            Die Datenübertragung erfolgt auf Basis von EU-Standardvertragsklauseln (SCC)
-            gemäß Art. 46 Abs. 2 lit. c DSGVO. Weitere Informationen:{" "}
-            <a href="https://vercel.com/legal/dpa" target="_blank" rel="noopener" className="text-emerald hover:underline">
-              Vercel Data Processing Agreement
-            </a>.
+            <strong>Drittlandtransfer (USA):</strong> Vercel Inc. hat seinen Sitz in den
+            USA. Die Datenübertragung erfolgt primär auf Grundlage des
+            Angemessenheitsbeschlusses der EU-Kommission zum EU-U.S. Data Privacy
+            Framework (DPF) gemäß Art. 45 DSGVO. Vercel ist unter dem DPF zertifiziert
+            (überprüfbar unter{" "}
+            <a href="https://www.dataprivacyframework.gov" target="_blank" rel="noopener" className="text-emerald hover:underline">
+              dataprivacyframework.gov
+            </a>
+            ). Ergänzend greifen die im DPA enthaltenen EU-Standardvertragsklauseln (SCCs)
+            gemäß Art. 46 Abs. 2 lit. c DSGVO als zusätzliche Absicherung.
           </p>
 
           <h3 className="text-base font-semibold text-foreground/90 mt-6 mb-2">3.2 Lokaler Browser-Speicher (localStorage / IndexedDB)</h3>
@@ -113,9 +126,16 @@ export default function DatenschutzPage() {
             nicht und werden nicht an Server übertragen.
           </p>
           <p className="mt-2">
-            <strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. f DSGVO (berechtigtes
-            Interesse an der Bereitstellung der Anwendungsfunktionalität ohne
-            serverseitige Datenhaltung).
+            <strong>Rechtsgrundlage (TDDDG):</strong> Die lokale Speicherung ist nach
+            § 25 Abs. 2 Nr. 2 TDDDG ohne Einwilligung zulässig, da sie unbedingt
+            erforderlich ist, um den von Ihnen gewünschten Dienst (Turnier-Timer)
+            bereitzustellen. Eine Einwilligung oder ein Cookie-Banner ist daher nicht
+            erforderlich.
+          </p>
+          <p className="mt-2">
+            <strong>Rechtsgrundlage (DSGVO):</strong> Art. 6 Abs. 1 lit. f DSGVO
+            (berechtigtes Interesse an der Bereitstellung der Anwendungsfunktionalität
+            ohne serverseitige Datenhaltung).
           </p>
           <p className="mt-2">
             <strong>Speicherdauer:</strong> Die Daten verbleiben solange im Browser,

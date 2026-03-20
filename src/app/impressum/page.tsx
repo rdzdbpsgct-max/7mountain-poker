@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export const metadata = {
   title: "Impressum – 7Mountain Poker",
-  description: "Impressum und Angaben gemäß § 5 DDG für 7Mountain Poker Tournament Timer",
+  description: "Impressum gemäß § 5 DDG / § 18 Abs. 1 MStV für 7Mountain Poker Tournament Timer",
 };
 
 export default function ImpressumPage() {
@@ -28,7 +28,7 @@ export default function ImpressumPage() {
       {/* Content */}
       <main className="mx-auto max-w-3xl px-4 py-12">
         <h1 className="text-3xl sm:text-4xl font-black text-foreground mb-2">Impressum</h1>
-        <p className="text-muted mb-10">Angaben gemäß § 5 DDG (Digitale-Dienste-Gesetz)</p>
+        <p className="text-muted mb-10">Angaben gemäß § 5 DDG · § 18 Abs. 1 MStV</p>
 
         <Section title="Verantwortlicher">
           <address className="not-italic rounded-lg border border-border/50 border-l-4 border-l-emerald bg-surface/40 px-5 py-4 leading-8 text-foreground/80">
@@ -45,10 +45,6 @@ export default function ImpressumPage() {
           </InfoBox>
         </Section>
 
-        <Section title="Redaktionell verantwortlich">
-          <p>Michael Prill (Anschrift wie oben)</p>
-        </Section>
-
         <Section title="Hinweis zur Website">
           <p>
             Diese Website stellt eine kostenlose, nicht-kommerzielle Webanwendung
@@ -63,18 +59,13 @@ export default function ImpressumPage() {
           </p>
         </Section>
 
-        <Section title="EU-Streitschlichtung">
+        <Section title="Kein Glücksspiel">
           <p>
-            Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung
-            (OS) bereit:{" "}
-            <a href="https://ec.europa.eu/consumers/odr/" target="_blank" rel="noopener" className="text-emerald hover:underline">
-              https://ec.europa.eu/consumers/odr/
-            </a>.
-          </p>
-          <p className="mt-2">
-            Meine E-Mail-Adresse finden Sie oben im Impressum. Ich bin nicht bereit und
-            nicht verpflichtet, an Streitbeilegungsverfahren vor einer
-            Verbraucherschlichtungsstelle teilzunehmen.
+            Bei <em>7Mountain Poker – Tournament Timer</em> handelt es sich um ein reines
+            Turnier-Verwaltungstool (Blindstruktur, Timer, Spielerverwaltung). Es wird kein
+            Glücksspiel im Sinne des § 3 Abs. 1 GlüStV veranstaltet oder vermittelt. Es
+            findet kein Einsatz von echtem Geld statt, und es werden keine Gewinnchancen
+            angeboten.
           </p>
         </Section>
 
