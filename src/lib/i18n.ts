@@ -38,7 +38,7 @@ export const translations = {
       players: {
         title: "Spieler & Ligen",
         description:
-          "Spielerverwaltung mit Punktesystem. Verwalte Ligen und tracke Ergebnisse \u00fcber mehrere Turniere.",
+          "Spielerverwaltung mit Punktesystem und automatischer Spieler\u00fcbernahme aus Liga-Spieltagen. Verwalte Ligen und tracke Ergebnisse \u00fcber mehrere Turniere.",
       },
       series: {
         title: "Serien-Modus",
@@ -48,7 +48,7 @@ export const translations = {
       tv: {
         title: "TV-Modus",
         description:
-          "Zeige den Timer auf TV oder Beamer. 4 Layouts und 7 rotierende Info-Screens f\u00fcr das ultimative Turnier-Erlebnis.",
+          "Zeige den Timer auf TV oder Beamer. 4 Layouts und 8 rotierende Info-Screens f\u00fcr das ultimative Turnier-Erlebnis.",
       },
       remote: {
         title: "Fernbedienung",
@@ -58,12 +58,12 @@ export const translations = {
       voice: {
         title: "Sprachansagen",
         description:
-          "468 professionelle Audio-Ansagen f\u00fcr Level-Wechsel, Pausen, Eliminierungen, Bubble und Gewinner.",
+          "590 professionelle Audio-Ansagen f\u00fcr Level-Wechsel, Pausen, Eliminierungen, Bubble und Gewinner.",
       },
       pwa: {
         title: "PWA & Offline",
         description:
-          "Installiere die App auf jedem Ger\u00e4t. Funktioniert auch ohne Internet \u2014 alle Sounds inklusive.",
+          "Installiere die App auf jedem Ger\u00e4t. Funktioniert vollst\u00e4ndig offline mit Statusanzeige \u2014 alle Sounds inklusive.",
       },
     },
     tvRemote: {
@@ -74,9 +74,9 @@ export const translations = {
       tv: {
         title: "TV-Modus",
         description:
-          "Vollbild-Anzeige f\u00fcr TV, Beamer oder zweiten Monitor. 7 rotierende Info-Screens zeigen Timer, Blinds, Spieler, Auszahlungen und mehr.",
+          "Vollbild-Anzeige f\u00fcr TV, Beamer oder zweiten Monitor. 8 rotierende Info-Screens zeigen Timer, Blinds, Spieler, Auszahlungen, Liga und mehr.",
         layouts: ["Standard 55/45", "Kompakt 40/60", "Timer-Only", "Ultra Large 70/30"],
-        screens: ["Timer", "Blinds", "Countdown", "Spieler", "Auszahlung", "Blindstruktur", "Sitzplan"],
+        screens: ["Timer", "Blinds", "Countdown", "Spieler", "Auszahlung", "Blindstruktur", "Sitzplan", "Liga"],
       },
       remote: {
         title: "Smartphone-Fernbedienung",
@@ -92,9 +92,9 @@ export const translations = {
       subtitle:
         "Professionelle Funktionen, die deinen Pokerabend auf das n\u00e4chste Level heben.",
       voiceItem: {
-        title: "468 Sprachansagen",
+        title: "590 Sprachansagen",
         description:
-          "Professionelle Audio-Ansagen f\u00fcr Level-Wechsel, Pausen, Bubble, In The Money, Eliminierungen und Turniersieger. Mit Countdown-Beeps und Fanfaren.",
+          "Professionelle ElevenLabs-Stimmen (DE + EN) f\u00fcr Level-Wechsel, Pausen, Bubble, In The Money, Eliminierungen und Turniersieger. Mit Countdown-Beeps und Fanfaren.",
       },
       templates: {
         title: "Vorlagen & Templates",
@@ -117,9 +117,9 @@ export const translations = {
           "Komplettes Rebuy-System mit Add-Ons und Bounties. Automatische Berechnung von Prizepool und Auszahlungen.",
       },
       history: {
-        title: "Historie & Statistiken",
+        title: "Historie & Turnier-Klon",
         description:
-          "Vollst\u00e4ndige Turnier-Historie mit Spielerstatistiken. Tracke Gewinne, Platzierungen und Entwicklung.",
+          "Vollst\u00e4ndige Turnier-Historie mit Spielerstatistiken. Vergangene Turniere per Klick wiederholen \u2014 gleiche Blinds, Buy-In und Spieler.",
       },
     },
     powerTools: {
@@ -148,7 +148,7 @@ export const translations = {
       },
       autoSave: {
         title: "Auto-Save & Resume",
-        description: "Turniere werden automatisch gespeichert. Browser-Absturz? Kein Problem — einfach dort weitermachen wo du aufgehört hast.",
+        description: "Turniere werden automatisch in IndexedDB gespeichert. Browser-Absturz oder langsame Verbindung? Kein Problem \u2014 Sicherheits-Timeout garantiert App-Start.",
       },
       tournamentLog: {
         title: "Turnier-Log",
@@ -306,7 +306,7 @@ export const translations = {
       players: {
         title: "Players & Leagues",
         description:
-          "Player management with point system. Manage leagues and track results across multiple tournaments.",
+          "Player management with point system and automatic player pre-fill from league game days. Manage leagues and track results across multiple tournaments.",
       },
       series: {
         title: "Series Mode",
@@ -316,7 +316,7 @@ export const translations = {
       tv: {
         title: "TV Mode",
         description:
-          "Display the timer on TV or projector. 4 layouts and 7 rotating info screens for the ultimate tournament experience.",
+          "Display the timer on TV or projector. 4 layouts and 8 rotating info screens for the ultimate tournament experience.",
       },
       remote: {
         title: "Remote Control",
@@ -326,12 +326,12 @@ export const translations = {
       voice: {
         title: "Voice Announcements",
         description:
-          "468 professional audio announcements for level changes, breaks, eliminations, bubble and winners.",
+          "590 professional audio announcements for level changes, breaks, eliminations, bubble and winners.",
       },
       pwa: {
         title: "PWA & Offline",
         description:
-          "Install the app on any device. Works without internet \u2014 all sounds included.",
+          "Install the app on any device. Works fully offline with status indicator \u2014 all sounds included.",
       },
     },
     tvRemote: {
@@ -342,9 +342,9 @@ export const translations = {
       tv: {
         title: "TV Mode",
         description:
-          "Fullscreen display for TV, projector or second monitor. 7 rotating info screens show timer, blinds, players, payouts and more.",
+          "Fullscreen display for TV, projector or second monitor. 8 rotating info screens show timer, blinds, players, payouts, league and more.",
         layouts: ["Standard 55/45", "Compact 40/60", "Timer-Only", "Ultra Large 70/30"],
-        screens: ["Timer", "Blinds", "Countdown", "Players", "Payouts", "Blind Structure", "Seating"],
+        screens: ["Timer", "Blinds", "Countdown", "Players", "Payouts", "Blind Structure", "Seating", "League"],
       },
       remote: {
         title: "Smartphone Remote",
@@ -360,9 +360,9 @@ export const translations = {
       subtitle:
         "Professional features that take your poker night to the next level.",
       voiceItem: {
-        title: "468 Voice Announcements",
+        title: "590 Voice Announcements",
         description:
-          "Professional audio announcements for level changes, breaks, bubble, in the money, eliminations and winners. With countdown beeps and fanfares.",
+          "Professional ElevenLabs voices (DE + EN) for level changes, breaks, bubble, in the money, eliminations and winners. With countdown beeps and fanfares.",
       },
       templates: {
         title: "Templates & Presets",
@@ -385,9 +385,9 @@ export const translations = {
           "Complete rebuy system with add-ons and bounties. Automatic calculation of prize pool and payouts.",
       },
       history: {
-        title: "History & Statistics",
+        title: "History & Tournament Cloning",
         description:
-          "Complete tournament history with player statistics. Track wins, placements and development.",
+          "Complete tournament history with player statistics. Repeat past tournaments with one click \u2014 same blinds, buy-in and players.",
       },
     },
     powerTools: {
@@ -416,7 +416,7 @@ export const translations = {
       },
       autoSave: {
         title: "Auto-Save & Resume",
-        description: "Tournaments are saved automatically. Browser crash? No problem — just continue where you left off.",
+        description: "Tournaments are saved automatically to IndexedDB. Browser crash or slow connection? No problem \u2014 safety timeout guarantees app startup.",
       },
       tournamentLog: {
         title: "Tournament Log",
