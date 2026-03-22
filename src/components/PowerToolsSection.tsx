@@ -1,5 +1,11 @@
+import Link from "next/link";
 import type { Translations } from "./LanguageContext";
 import AnimatedSection from "./AnimatedSection";
+
+const featureLinks: Record<string, string> = {
+  icm: "/features/icm-rechner",
+  multiTable: "/features/tv-modus",
+};
 
 const toolIcons = {
   sidePot: (
@@ -94,19 +100,23 @@ export default function PowerToolsSection({ t }: { t: Translations }) {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
           {featureKeys.map((key, i) => {
             const feature = t.powerTools[key];
+            const href = featureLinks[key];
+            const card = (
+              <div className="group rounded-xl border border-border/40 bg-surface/30 p-5 backdrop-blur-sm h-full transition-all duration-300 hover:border-emerald/30 hover:-translate-y-0.5 hover:shadow-md hover:shadow-emerald/10">
+                <div className="w-10 h-10 rounded-lg bg-emerald/10 border border-emerald/20 flex items-center justify-center mb-3 group-hover:bg-emerald/20 group-hover:scale-110 transition-all duration-300">
+                  {toolIcons[iconKeys[i]]}
+                </div>
+                <h3 className="text-sm font-bold text-foreground mb-1.5 group-hover:text-emerald transition-colors duration-300">
+                  {feature.title}
+                </h3>
+                <p className="text-xs text-muted leading-relaxed">
+                  {feature.description}
+                </p>
+              </div>
+            );
             return (
               <AnimatedSection key={key} delay={i * 50}>
-                <div className="group rounded-xl border border-border/40 bg-surface/30 p-5 backdrop-blur-sm h-full transition-all duration-300 hover:border-emerald/30 hover:-translate-y-0.5 hover:shadow-md hover:shadow-emerald/10">
-                  <div className="w-10 h-10 rounded-lg bg-emerald/10 border border-emerald/20 flex items-center justify-center mb-3 group-hover:bg-emerald/20 group-hover:scale-110 transition-all duration-300">
-                    {toolIcons[iconKeys[i]]}
-                  </div>
-                  <h3 className="text-sm font-bold text-foreground mb-1.5 group-hover:text-emerald transition-colors duration-300">
-                    {feature.title}
-                  </h3>
-                  <p className="text-xs text-muted leading-relaxed">
-                    {feature.description}
-                  </p>
-                </div>
+                {href ? <Link href={href} className="block h-full">{card}</Link> : card}
               </AnimatedSection>
             );
           })}

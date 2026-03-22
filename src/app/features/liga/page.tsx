@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import BreadcrumbJsonLd from "../../../components/BreadcrumbJsonLd";
 
 export const metadata: Metadata = {
   title: "Poker Liga verwalten | Kostenlose Ligaverwaltung | 7Mountain Poker",
@@ -22,6 +23,7 @@ export default function LigaPage() {
         </div>
       </header>
 
+      <BreadcrumbJsonLd items={[{ name: "Features", href: "/#features" }, { name: "Liga", href: "/features/liga" }]} />
       <main className="mx-auto max-w-4xl px-4 py-16">
         <span className="text-xs font-bold tracking-[0.2em] text-emerald uppercase">Feature</span>
         <h1 className="mt-2 text-4xl sm:text-5xl font-black text-foreground">

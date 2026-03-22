@@ -1,54 +1,64 @@
 import type { MetadataRoute } from "next";
 
 const siteUrl = "https://7mountain-poker.vercel.app";
+const lastMod = new Date("2026-03-22");
+
+// Feature pages with their paths
+const featurePages = [
+  "tv-modus",
+  "fernbedienung",
+  "liga",
+  "blindstruktur",
+  "icm-rechner",
+];
+
+// Blog articles
+const blogArticles = [
+  "poker-turnier-planen",
+  "perfekte-blindstruktur",
+  "poker-timer-vergleich",
+];
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
+    // Homepage
     {
       url: siteUrl,
-      lastModified: new Date("2026-03-22"),
+      lastModified: lastMod,
       changeFrequency: "weekly",
       priority: 1.0,
     },
-    {
-      url: `${siteUrl}/features/tv-modus`,
-      lastModified: new Date("2026-03-22"),
-      changeFrequency: "monthly",
+    // Feature pages
+    ...featurePages.map((page) => ({
+      url: `${siteUrl}/features/${page}`,
+      lastModified: lastMod,
+      changeFrequency: "monthly" as const,
       priority: 0.8,
-    },
+    })),
+    // Blog articles
+    ...blogArticles.map((slug) => ({
+      url: `${siteUrl}/blog/${slug}`,
+      lastModified: lastMod,
+      changeFrequency: "monthly" as const,
+      priority: 0.7,
+    })),
+    // Blog index
     {
-      url: `${siteUrl}/features/fernbedienung`,
-      lastModified: new Date("2026-03-22"),
-      changeFrequency: "monthly",
-      priority: 0.8,
+      url: `${siteUrl}/blog`,
+      lastModified: lastMod,
+      changeFrequency: "weekly",
+      priority: 0.6,
     },
-    {
-      url: `${siteUrl}/features/liga`,
-      lastModified: new Date("2026-03-22"),
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: `${siteUrl}/features/blindstruktur`,
-      lastModified: new Date("2026-03-22"),
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: `${siteUrl}/features/icm-rechner`,
-      lastModified: new Date("2026-03-22"),
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
+    // Legal pages
     {
       url: `${siteUrl}/impressum`,
-      lastModified: new Date("2026-03-22"),
+      lastModified: lastMod,
       changeFrequency: "yearly",
       priority: 0.3,
     },
     {
       url: `${siteUrl}/datenschutz`,
-      lastModified: new Date("2026-03-22"),
+      lastModified: lastMod,
       changeFrequency: "yearly",
       priority: 0.3,
     },

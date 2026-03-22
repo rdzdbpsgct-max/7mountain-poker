@@ -6,7 +6,7 @@ export default function Footer({ t }: { t: Translations }) {
   return (
     <footer className="border-t border-border/30 bg-surface/20 py-12">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
           {/* Brand */}
           <div>
             <div className="text-lg font-bold text-foreground mb-2">
@@ -51,6 +51,21 @@ export default function Footer({ t }: { t: Translations }) {
                   {t.footer.links.app} →
                 </a>
               </li>
+            </ul>
+          </div>
+
+          {/* Feature pages */}
+          <div>
+            <h4 className="text-xs font-bold tracking-[0.15em] text-muted uppercase mb-4">
+              Features
+            </h4>
+            <ul className="space-y-2">
+              <li><Link href="/features/tv-modus" className="text-sm text-muted hover:text-foreground transition-colors">TV-Modus</Link></li>
+              <li><Link href="/features/fernbedienung" className="text-sm text-muted hover:text-foreground transition-colors">Fernbedienung</Link></li>
+              <li><Link href="/features/liga" className="text-sm text-muted hover:text-foreground transition-colors">Liga</Link></li>
+              <li><Link href="/features/blindstruktur" className="text-sm text-muted hover:text-foreground transition-colors">Blindstruktur</Link></li>
+              <li><Link href="/features/icm-rechner" className="text-sm text-muted hover:text-foreground transition-colors">ICM-Rechner</Link></li>
+              <li><Link href="/blog" className="text-sm text-muted hover:text-foreground transition-colors">Blog</Link></li>
             </ul>
           </div>
 
