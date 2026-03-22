@@ -17,6 +17,10 @@ const blogArticles = [
   "poker-turnier-planen",
   "perfekte-blindstruktur",
   "poker-timer-vergleich",
+  "poker-liga-organisieren",
+  "icm-erklaert",
+  "poker-chips-guide",
+  "multi-table-turnier",
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {

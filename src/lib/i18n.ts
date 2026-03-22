@@ -107,19 +107,19 @@ export const translations = {
           "Volle Tastenkürzel für Power-User. Steuere Timer, Levels, Sound und Spieler blitzschnell per Keyboard.",
       },
       currency: {
-        title: "Multi-W\u00e4hrung",
+        title: "Flexible Einheiten",
         description:
-          "Unterst\u00fctzt EUR, USD, GBP, CHF und SEK. Buy-In und Auszahlungen in deiner W\u00e4hrung.",
+          "Unterst\u00fctzt verschiedene Einheiten und Formate. Passe die Darstellung an deine Runde an.",
       },
       rebuy: {
         title: "Rebuy & Add-On",
         description:
-          "Komplettes Rebuy-System mit Add-Ons und Bounties. Automatische Berechnung von Prizepool und Auszahlungen.",
+          "Komplettes Rebuy-System mit Add-Ons und Bounties. Automatische Berechnung von Prizepool und Platzierungen.",
       },
       history: {
         title: "Historie & Turnier-Klon",
         description:
-          "Vollst\u00e4ndige Turnier-Historie mit Spielerstatistiken. Vergangene Turniere per Klick wiederholen \u2014 gleiche Blinds, Buy-In und Spieler.",
+          "Vollst\u00e4ndige Turnier-Historie mit Spielerstatistiken. Vergangene Turniere per Klick wiederholen \u2014 gleiche Blinds, Struktur und Spieler.",
       },
     },
     powerTools: {
@@ -375,19 +375,19 @@ export const translations = {
           "Full keyboard shortcuts for power users. Control timer, levels, sound and players instantly via keyboard.",
       },
       currency: {
-        title: "Multi-Currency",
+        title: "Flexible Units",
         description:
-          "Supports EUR, USD, GBP, CHF and SEK. Buy-in and payouts in your currency.",
+          "Supports various units and formats. Customize the display for your game.",
       },
       rebuy: {
         title: "Rebuy & Add-On",
         description:
-          "Complete rebuy system with add-ons and bounties. Automatic calculation of prize pool and payouts.",
+          "Complete rebuy system with add-ons and bounties. Automatic calculation of prize pool and placements.",
       },
       history: {
         title: "History & Tournament Cloning",
         description:
-          "Complete tournament history with player statistics. Repeat past tournaments with one click \u2014 same blinds, buy-in and players.",
+          "Complete tournament history with player statistics. Repeat past tournaments with one click \u2014 same blinds, structure and players.",
       },
     },
     powerTools: {

@@ -5,7 +5,7 @@ import BreadcrumbJsonLd from "../../../components/BreadcrumbJsonLd";
 export const metadata: Metadata = {
   title: "Poker Turnier planen: Der komplette Guide für 2026 | 7Mountain Poker",
   description:
-    "Vom Buy-In über die Blindstruktur bis zur Auszahlung. Der umfassende Guide für die perfekte Organisation deines Poker-Turniers zu Hause.",
+    "Von der Spieleranzahl über die Blindstruktur bis zur Platzierung. Der umfassende Guide für die perfekte Organisation deines Poker-Turniers zu Hause.",
   alternates: { canonical: "/blog/poker-turnier-planen" },
 };
 
@@ -47,20 +47,20 @@ export default function PokerTurnierPlanenPage() {
           </p>
           <p className="text-muted leading-relaxed">
             Verschicke die Einladung mindestens <strong className="text-foreground">eine Woche vorher</strong> mit Datum, Uhrzeit,
-            Buy-In-Höhe und Adresse. Eine WhatsApp-Gruppe reicht völlig aus.
+            Startzeit und Adresse. Eine WhatsApp-Gruppe reicht völlig aus.
           </p>
 
-          <h2 className="text-2xl font-bold text-foreground mt-12 mb-4">2. Buy-In festlegen</h2>
+          <h2 className="text-2xl font-bold text-foreground mt-12 mb-4">2. Turnier-Format wählen</h2>
           <p className="text-muted leading-relaxed">
-            Der Buy-In bestimmt die Atmosphäre. Für lockere Runden empfehlen sich <strong className="text-foreground">5–20 €</strong>,
-            für ambitioniertere Spieler <strong className="text-foreground">20–50 €</strong>. Wichtig: Der Betrag sollte für alle
-            Spieler komfortabel sein. Niemand soll sich gezwungen fühlen, mehr zu riskieren als ihm lieb ist.
+            Das Turnier-Format bestimmt die Atmosphäre. Entscheide vorab, ob es ein <strong className="text-foreground">Freezeout</strong> (keine
+            zweite Chance) oder ein <strong className="text-foreground">Rebuy-Turnier</strong> wird. Bei Rebuys können eliminierte Spieler
+            in den ersten Levels zurückkehren — das hält alle länger im Spiel.
           </p>
           <div className="rounded-xl border border-emerald/20 bg-emerald/5 p-6">
             <p className="text-sm text-emerald font-semibold mb-2">💡 Tipp</p>
             <p className="text-sm text-muted">
-              Mit Rebuys kannst du den Prizepool vergrößern, ohne den initialen Buy-In zu erhöhen.
-              Ein typisches Setup: 10 € Buy-In + 1 Rebuy in den ersten 4 Levels.
+              Ein typisches Setup: Rebuys in den ersten 4 Levels erlaubt,
+              danach Freezeout. Optional mit einem Add-On nach der Rebuy-Phase.
             </p>
           </div>
 
@@ -99,9 +99,9 @@ export default function PokerTurnierPlanenPage() {
             für 12–15 Min Levels.
           </p>
 
-          <h2 className="text-2xl font-bold text-foreground mt-12 mb-4">5. Auszahlungsstruktur</h2>
+          <h2 className="text-2xl font-bold text-foreground mt-12 mb-4">5. Platzierungen festlegen</h2>
           <p className="text-muted leading-relaxed">
-            Standard-Auszahlung für 6–10 Spieler:
+            Standard-Verteilung der Plätze für 6–10 Spieler:
           </p>
           <ul className="space-y-1 text-muted">
             <li className="flex items-start gap-2"><span className="text-emerald">🏆</span> 1. Platz: 50% des Prizepools</li>

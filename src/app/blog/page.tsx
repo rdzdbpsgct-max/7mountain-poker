@@ -14,7 +14,7 @@ const articles = [
     slug: "poker-turnier-planen",
     title: "Poker Turnier planen: Der komplette Guide für 2026",
     excerpt:
-      "Vom Buy-In über die Blindstruktur bis zur Auszahlung — alles was du für ein perfekt organisiertes Home Game brauchst.",
+      "Von der Spieleranzahl über die Blindstruktur bis zur Platzierung — alles was du für ein perfekt organisiertes Home Game brauchst.",
     date: "22. März 2026",
     readTime: "12 Min",
     tags: ["Planung", "Home Game", "Anfänger"],
@@ -32,10 +32,46 @@ const articles = [
     slug: "poker-timer-vergleich",
     title: "Poker Timer App Vergleich 2026: Die besten kostenlosen Timer",
     excerpt:
-      "Wir vergleichen die beliebtesten Poker-Timer-Apps: Features, Preise, Offline-Fähigkeit und Benutzerfreundlichkeit.",
+      "Wir vergleichen die beliebtesten Poker-Timer-Apps: Features, Funktionsumfang, Offline-Fähigkeit und Benutzerfreundlichkeit.",
     date: "22. März 2026",
     readTime: "10 Min",
     tags: ["Vergleich", "Apps", "Tools"],
+  },
+  {
+    slug: "poker-liga-organisieren",
+    title: "Poker Liga organisieren: Der komplette Guide",
+    excerpt:
+      "Punktesystem, Spielplan, Tiebreaker und Saison-Abschluss — so organisierst du eine faire und spannende Poker-Liga.",
+    date: "22. März 2026",
+    readTime: "13 Min",
+    tags: ["Liga", "Organisation", "Fortgeschritten"],
+  },
+  {
+    slug: "icm-erklaert",
+    title: "ICM erklärt: Das Independent Chip Model verstehen",
+    excerpt:
+      "Was ist ICM? Wie funktioniert die Berechnung? Anwendung bei Deal-Verhandlungen und Bubble-Strategie — einfach erklärt.",
+    date: "22. März 2026",
+    readTime: "11 Min",
+    tags: ["Strategie", "ICM", "Fortgeschritten"],
+  },
+  {
+    slug: "poker-chips-guide",
+    title: "Poker Chips Guide: Farben, Werte und Verteilung",
+    excerpt:
+      "Welche Chip-Farben haben welchen Wert? Wie viele Chips brauchst du? 3 bewährte Chip-Setups für Home Games.",
+    date: "22. März 2026",
+    readTime: "10 Min",
+    tags: ["Equipment", "Chips", "Anfänger"],
+  },
+  {
+    slug: "multi-table-turnier",
+    title: "Multi-Table Turniere im Home Game: So funktioniert's",
+    excerpt:
+      "Ab 12 Spielern brauchst du mehrere Tische. Verteilung, Balancing, Tischauflösung und Final Table — der komplette Guide.",
+    date: "22. März 2026",
+    readTime: "12 Min",
+    tags: ["Multi-Table", "Organisation", "Fortgeschritten"],
   },
 ];
 

@@ -5,7 +5,7 @@ import BreadcrumbJsonLd from "../../../components/BreadcrumbJsonLd";
 export const metadata: Metadata = {
   title: "Poker Timer App Vergleich 2026 | Die besten kostenlosen Timer | 7Mountain Poker",
   description:
-    "Vergleich der beliebtesten Poker-Timer-Apps 2026: Features, Preise, Offline-Fähigkeit und Benutzerfreundlichkeit. Welche App ist die beste?",
+    "Vergleich der beliebtesten Poker-Timer-Apps 2026: Features, Funktionsumfang, Offline-Fähigkeit und Benutzerfreundlichkeit. Welche App ist die beste?",
   alternates: { canonical: "/blog/poker-timer-vergleich" },
 };
 
@@ -35,7 +35,7 @@ export default function PokerTimerVergleichPage() {
         <div className="mt-12 space-y-8">
           <p className="text-lg text-muted leading-relaxed">
             Es gibt dutzende Poker-Timer-Apps — aber welche ist die richtige für dein Home Game?
-            Wir vergleichen die beliebtesten Optionen nach Features, Preis, Offline-Fähigkeit und
+            Wir vergleichen die beliebtesten Optionen nach Features, Funktionsumfang, Offline-Fähigkeit und
             Benutzerfreundlichkeit.
           </p>
 
@@ -67,7 +67,7 @@ export default function PokerTimerVergleichPage() {
                 </tr>
               </thead>
               <tbody className="text-muted">
-                <tr className="border-b border-border/20"><td className="p-3 font-medium text-foreground">Preis</td><td className="p-3 text-emerald">Kostenlos</td><td className="p-3">$4,99</td><td className="p-3">Freemium</td></tr>
+                <tr className="border-b border-border/20"><td className="p-3 font-medium text-foreground">Zugang</td><td className="p-3 text-emerald">Kostenlos</td><td className="p-3">Kostenpflichtig</td><td className="p-3">Teilweise kostenlos</td></tr>
                 <tr className="border-b border-border/20"><td className="p-3 font-medium text-foreground">Plattform</td><td className="p-3 text-emerald">Web (PWA)</td><td className="p-3">iOS/Android</td><td className="p-3">iOS/Android</td></tr>
                 <tr className="border-b border-border/20"><td className="p-3 font-medium text-foreground">Offline</td><td className="p-3 text-emerald">✓ Voll</td><td className="p-3">✓</td><td className="p-3">✓</td></tr>
                 <tr className="border-b border-border/20"><td className="p-3 font-medium text-foreground">TV-Modus</td><td className="p-3 text-emerald">✓ 4 Layouts</td><td className="p-3">✓ Basic</td><td className="p-3">✗</td></tr>
@@ -99,7 +99,7 @@ export default function PokerTimerVergleichPage() {
           <h2 className="text-2xl font-bold text-foreground mt-12 mb-4">Blinds Are Up: Der Klassiker</h2>
           <p className="text-muted leading-relaxed">
             Eine solide native App mit gutem UI-Design. Stärken sind die einfache Bedienung und
-            der Multi-Table-Support. Schwächen: Keine Fernbedienung, kein Liga-System, kostenpflichtig ($4,99).
+            der Multi-Table-Support. Schwächen: Keine Fernbedienung, kein Liga-System, kostenpflichtig.
           </p>
 
           <h2 className="text-2xl font-bold text-foreground mt-12 mb-4">Poker Timer Pro: Der Nische-Player</h2>
@@ -135,8 +135,8 @@ export default function PokerTimerVergleichPage() {
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2"><path d="M10 4l-4 4 4 4" /></svg>
             Vorheriger Artikel
           </Link>
-          <Link href="/blog" className="inline-flex items-center gap-2 text-emerald hover:underline font-semibold">
-            Alle Artikel
+          <Link href="/blog/poker-liga-organisieren" className="inline-flex items-center gap-2 text-emerald hover:underline font-semibold">
+            Nächster Artikel
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2"><path d="M6 4l4 4-4 4" /></svg>
           </Link>
         </div>

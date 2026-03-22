@@ -52,8 +52,8 @@ export default function LigaPage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {[
               { title: "Punktesystem", desc: "Konfigurierbares Punktesystem (Standard: 1.→10, 2.→7, 3.→5, ...). Punkte pro Platzierung individuell anpassbar." },
-              { title: "Spieltage & Finanzen", desc: "Automatische Spieltag-Erstellung bei Turnierende. Buy-In, Payout und Netto-Bilanz pro Spieler und Spieltag." },
-              { title: "Erweiterte Standings", desc: "Gesamttabelle mit Punkten, Kosten, Auszahlung, Netto-Bilanz, Teilnahmequote und Knockouts." },
+              { title: "Spieltage & Ergebnisse", desc: "Automatische Spieltag-Erstellung bei Turnierende. Platzierungen, Punkte und Statistiken pro Spieler und Spieltag." },
+              { title: "Erweiterte Standings", desc: "Gesamttabelle mit Punkten, Platzierungen, Teilnahmequote, Knockouts und detaillierten Statistiken." },
               { title: "Tiebreaker-Konfiguration", desc: "5 konfigurierbare Tiebreaker-Kriterien: Ø Platzierung, Siege, Cashes, Head-to-Head, letztes Ergebnis." },
               { title: "3 Ranking-Algorithmen", desc: "Standard-Punkte, ELO-Rating (konfigurierbarer K-Faktor) oder gewichtete Punkte mit Aktualitäts-Decay." },
               { title: "Head-to-Head-Matrix", desc: "NxN Heatmap zeigt direkte Duelle zwischen allen Liga-Teilnehmern. Wer hat wen wie oft geschlagen?" },

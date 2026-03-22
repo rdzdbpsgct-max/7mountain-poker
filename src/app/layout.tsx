@@ -80,7 +80,7 @@ export default function RootLayout({
       offers: {
         "@type": "Offer",
         price: "0",
-        priceCurrency: "EUR",
+        priceCurrency: "USD",
       },
       featureList: [
         "Tournament Timer",
@@ -94,7 +94,7 @@ export default function RootLayout({
         "Side Pot Calculator",
         "Rebuy, Add-On & Bounty",
         "PWA & Offline Support",
-        "Multi-Currency (EUR, USD, GBP, CHF, SEK)",
+        "Multi-Format Support",
       ],
       author: {
         "@type": "Organization",
