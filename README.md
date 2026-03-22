@@ -1,79 +1,97 @@
 # 7Mountain Poker - Marketing Website
 
-Marketing- und Landing-Page for the [7Mountain Poker Tournament Timer](https://7mountainpoker.vercel.app).
+Marketing- und Landing-Page für den [7Mountain Poker Tournament Timer](https://7mountainpoker.vercel.app).
 
 **Live:** https://7mountain-poker.vercel.app
 
 ## Tech Stack
 
-- **Framework:** Next.js 16.2 (App Router, Turbopack)
+- **Framework:** Next.js 16.2 (App Router, Turbopack, static prerendering)
 - **Styling:** Tailwind CSS 4, custom dark poker theme
 - **Animations:** Framer Motion, CSS IntersectionObserver scroll animations
 - **Language:** TypeScript, bilingual (DE/EN) with runtime i18n
 - **Hosting:** Vercel (auto-deploy via GitHub)
 - **OG Image:** Dynamic Edge-generated Open Graph image
 
+## Pages (20 static pages)
+
+### Landing Page
+- `/` — Hauptseite mit allen Sektionen (Features, Demo, Power Tools, Quick Start, Testimonials, CTA)
+
+### Feature-Seiten (5)
+- `/features/tv-modus` — TV-Display mit 4 Layouts und 8 rotierenden Screens
+- `/features/fernbedienung` — Smartphone-Fernbedienung via PeerJS/WebRTC
+- `/features/liga` — Liga-Verwaltung mit 3 Ranking-Algorithmen
+- `/features/blindstruktur` — Blindstruktur-Generator (3 Geschwindigkeiten)
+- `/features/icm-rechner` — ICM-Rechner (Malmuth-Harville-Algorithmus)
+
+### Blog (7 Artikel)
+- `/blog` — Blog-Index mit allen Artikeln
+- `/blog/poker-turnier-planen` — Kompletter Turnier-Planungsguide
+- `/blog/perfekte-blindstruktur` — Blindstruktur-Tutorial mit Beispieltabellen
+- `/blog/poker-timer-vergleich` — Timer-App-Vergleich mit Feature-Matrix
+- `/blog/poker-liga-organisieren` — Liga-Organisation mit Punktesystemen
+- `/blog/icm-erklaert` — ICM-Erklärung mit Berechnungsbeispielen
+- `/blog/poker-chips-guide` — Chip-Farben, Werte, 3 Setups, Color-Up
+- `/blog/multi-table-turnier` — Multi-Table-Guide (Verteilung, Balancing, Final Table)
+
+### Rechtliches
+- `/impressum` — Impressum (§ 5 DDG)
+- `/datenschutz` — Datenschutzerklärung (DSGVO)
+
+## SEO
+
+- Dynamic Sitemap (`src/app/sitemap.ts`, 20 URLs)
+- JSON-LD: Organization + WebApplication schema
+- BreadcrumbList JSON-LD auf allen Unterseiten
+- Canonical URLs, Open Graph + Twitter Cards
+- Interne Verlinkung: Feature-Cards → Feature-Seiten, Footer, Blog-Cross-Links
+
 ## Project Structure
 
 ```
 src/
   app/
-    page.tsx              # Main landing page (client-side, LanguageProvider)
-    layout.tsx            # Root layout with SEO metadata + JSON-LD
-    globals.css           # Tailwind theme, animations, poker-themed utilities
-    opengraph-image.tsx   # Dynamic OG image (Edge runtime)
-    impressum/page.tsx    # Legal notice (Impressum, § 5 DDG)
-    datenschutz/page.tsx  # Privacy policy (DSGVO-compliant)
+    page.tsx              # Landing Page (client-side, LanguageProvider)
+    layout.tsx            # Root Layout, SEO Metadata, JSON-LD Schemas
+    globals.css           # Tailwind Theme, Animationen, Poker-Utilities
+    opengraph-image.tsx   # Dynamic OG Image (Edge Runtime)
+    sitemap.ts            # Dynamic Sitemap (20 URLs)
+    impressum/            # Impressum
+    datenschutz/          # Datenschutz
+    features/             # 5 Feature-Unterseiten
+    blog/                 # 7 Blog-Artikel + Index
   components/
-    Navigation.tsx        # Fixed header with nav links, language switcher, CTA
-    HeroSection.tsx       # Hero with badge, headline, CTAs, app screenshot
-    FeaturesSection.tsx   # 4 core + 4 advanced features grid
-    TVRemoteSection.tsx   # TV mode screenshot + phone remote mockup
-    DemoSection.tsx       # 3-step "How it works" + screenshot gallery
-    ProFeaturesSection.tsx # 6 pro features (voice, templates, keyboard, etc.)
-    PowerToolsSection.tsx # 12 power tools (ICM, side pot, bounty, etc.)
-    QuickStartSection.tsx # 3 quick start modes (Turbo/Standard/Deep Stack)
-    TestimonialsSection.tsx # 3 testimonial cards
-    CTASection.tsx        # Final call-to-action
-    Footer.tsx            # Footer with product/legal links
-    ImageLightbox.tsx     # Click-to-zoom lightbox with React Portal
-    AnimatedSection.tsx   # IntersectionObserver scroll-triggered animations
-    LanguageContext.tsx    # React Context for DE/EN language switching
+    Navigation.tsx        # Header mit Nav, Language Switcher, CTA
+    HeroSection.tsx       # Hero mit Badge, Headline, CTAs, Screenshot
+    FeaturesSection.tsx   # Feature-Grid mit Links zu Unterseiten
+    TVRemoteSection.tsx   # TV-Modus + Fernbedienungs-Mockup
+    DemoSection.tsx       # 3-Schritte-Anleitung + Screenshot-Galerie
+    ProFeaturesSection.tsx # 6 Profi-Features
+    PowerToolsSection.tsx # 12 Power Tools mit Links
+    QuickStartSection.tsx # 3 Turnier-Presets
+    TestimonialsSection.tsx # Testimonials
+    CTASection.tsx        # Finaler Call-to-Action
+    Footer.tsx            # 4-Spalten-Footer
+    ImageLightbox.tsx     # Klick-Zoom mit React Portal
+    AnimatedSection.tsx   # Scroll-Animationen
+    LanguageContext.tsx    # DE/EN Language Context
+    BreadcrumbJsonLd.tsx  # BreadcrumbList JSON-LD Komponente
   lib/
-    i18n.ts               # All translations (DE + EN)
+    i18n.ts               # Alle Übersetzungen (DE + EN)
 public/
-  screenshots/            # Real app screenshots (timer, TV mode, liga, etc.)
-  robots.txt              # Crawler rules
-  sitemap.xml             # Sitemap for SEO
+  screenshots/            # App-Screenshots
+  robots.txt              # Crawler-Regeln
 ```
-
-## Sections on the Landing Page
-
-1. **Hero** - Headline, "Kostenlos & ohne Anmeldung" badge, app screenshot
-2. **Features** - 4 core + 4 advanced features
-3. **TV & Remote** - TV mode screenshot + smartphone remote mockup
-4. **How It Works** - 3-step setup process with screenshot gallery
-5. **Pro Features** - 6 professional features
-6. **Power Tools** - 12 advanced tools (ICM, Side Pot, Bounty, etc.)
-7. **Quick Start** - 3 preset tournament modes
-8. **Testimonials** - User quotes
-9. **CTA** - Final call-to-action with trust badges
-
-## SEO
-
-- Open Graph + Twitter Card meta tags with dynamic OG image
-- JSON-LD structured data (WebApplication schema)
-- Canonical URL, sitemap.xml, robots.txt
-- Expanded keywords for poker timer search queries
 
 ## Development
 
 ```bash
 npm install
 npm run dev     # http://localhost:3000
-npm run build   # Production build
+npm run build   # Production Build (20 statische Seiten)
 ```
 
 ## Contact
 
-Michael Prill - sevenmountainpoker@icloud.com
+Michael Prill — sevenmountainpoker@icloud.com
