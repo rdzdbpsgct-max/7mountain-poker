@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
 
 export const runtime = "edge";
-export const alt = "7Mountain Poker - Tournament Timer";
+export const alt = "7Mountain Poker - Kostenloser Poker Turnier Timer";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -90,7 +90,7 @@ export default async function Image() {
             justifyContent: "center",
           }}
         >
-          {["TV-Modus", "Fernbedienung", "Ligen", "ICM-Rechner", "468 Ansagen"].map(
+          {["TV-Modus", "Fernbedienung", "Ligen", "ICM-Rechner", "590 Ansagen"].map(
             (f) => (
               <div
                 key={f}

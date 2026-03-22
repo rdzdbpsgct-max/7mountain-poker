@@ -1,6 +1,4 @@
-"use client";
-
-import { useLanguage } from "./LanguageContext";
+import type { Translations } from "./LanguageContext";
 import AnimatedSection from "./AnimatedSection";
 
 const featureIcons = [
@@ -43,8 +41,7 @@ const featureIcons = [
 
 const cardSuits = ["♠", "♥", "♦", "♣", "♠", "♥"];
 
-export default function ProFeaturesSection() {
-  const { t } = useLanguage();
+export default function ProFeaturesSection({ t }: { t: Translations }) {
 
   const features = [
     t.proFeatures.voiceItem,

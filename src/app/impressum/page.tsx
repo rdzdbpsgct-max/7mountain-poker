@@ -1,8 +1,11 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "Impressum – 7Mountain Poker",
-  description: "Impressum und Angaben gemäß § 5 DDG für 7Mountain Poker Tournament Timer",
+  title: "Impressum | 7Mountain Poker Tournament Timer",
+  description: "Impressum und Angaben gemäß § 5 DDG für 7Mountain Poker Tournament Timer.",
+  alternates: {
+    canonical: "/impressum",
+  },
 };
 
 export default function ImpressumPage() {

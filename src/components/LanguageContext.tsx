@@ -1,12 +1,14 @@
 "use client";
 
 import { createContext, useContext, useState, useEffect, ReactNode } from "react";
-import { Locale, getTranslations } from "@/lib/i18n";
+import { Locale, Translations, getTranslations } from "@/lib/i18n";
+
+export type { Translations };
 
 type LanguageContextType = {
   locale: Locale;
   setLocale: (locale: Locale) => void;
-  t: ReturnType<typeof getTranslations>;
+  t: Translations;
 };
 
 const LanguageContext = createContext<LanguageContextType | null>(null);
@@ -21,12 +23,12 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
 
   useEffect(() => {
     const titles: Record<Locale, string> = {
-      de: "7Mountain Poker - Tournament Timer",
-      en: "7Mountain Poker - Tournament Timer",
+      de: "Kostenloser Poker Turnier Timer | 7Mountain Poker",
+      en: "Free Poker Tournament Timer | 7Mountain Poker",
     };
     const descriptions: Record<Locale, string> = {
-      de: "Der ultimative Poker-Turnier-Timer. Blindstruktur, Spielerverwaltung, TV-Modus, Fernbedienung, Ligen und mehr. Kostenlos und ohne Anmeldung.",
-      en: "The ultimate poker tournament timer. Blind structure, player management, TV mode, remote control, leagues and more. Free and no signup required.",
+      de: "Kostenloser Poker Turnier Timer mit TV-Modus, Smartphone-Fernbedienung, Liga-System & 590 Sprachansagen. Ohne Anmeldung sofort starten.",
+      en: "Free poker tournament timer with TV mode, remote control, league system & 590 voice announcements. No signup needed. Works offline.",
     };
     document.title = titles[locale];
     document.documentElement.lang = locale;

@@ -534,6 +534,8 @@ export const translations = {
   },
 } as const;
 
-export function getTranslations(locale: Locale) {
+export type Translations = (typeof translations)[Locale];
+
+export function getTranslations(locale: Locale): Translations {
   return translations[locale];
 }

@@ -1,6 +1,4 @@
-"use client";
-
-import { useLanguage } from "./LanguageContext";
+import type { Translations } from "./LanguageContext";
 import AnimatedSection from "./AnimatedSection";
 
 const featureIcons = {
@@ -46,8 +44,7 @@ const featureIcons = {
   ),
 };
 
-export default function FeaturesSection() {
-  const { t } = useLanguage();
+export default function FeaturesSection({ t }: { t: Translations }) {
 
   const coreFeatures = [
     { icon: featureIcons.timer, ...t.features.timer },

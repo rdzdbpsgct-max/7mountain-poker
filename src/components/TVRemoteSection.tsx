@@ -1,11 +1,8 @@
-"use client";
-
-import { useLanguage } from "./LanguageContext";
+import type { Translations } from "./LanguageContext";
 import AnimatedSection from "./AnimatedSection";
 import ImageLightbox from "./ImageLightbox";
 
-export default function TVRemoteSection() {
-  const { t } = useLanguage();
+export default function TVRemoteSection({ t }: { t: Translations }) {
 
   return (
     <section id="tv-remote" className="py-24 sm:py-32 poker-felt">

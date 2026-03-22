@@ -1,10 +1,7 @@
-"use client";
-
-import { useLanguage } from "./LanguageContext";
+import type { Translations } from "./LanguageContext";
 import AnimatedSection from "./AnimatedSection";
 
-export default function CTASection() {
-  const { t } = useLanguage();
+export default function CTASection({ t }: { t: Translations }) {
 
   return (
     <section className="py-24 sm:py-32 relative">

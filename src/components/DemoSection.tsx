@@ -1,6 +1,4 @@
-"use client";
-
-import { useLanguage } from "./LanguageContext";
+import type { Translations } from "./LanguageContext";
 import AnimatedSection from "./AnimatedSection";
 import ImageLightbox from "./ImageLightbox";
 
@@ -16,8 +14,7 @@ const stepIcons = [
   </svg>,
 ];
 
-export default function DemoSection() {
-  const { t } = useLanguage();
+export default function DemoSection({ t }: { t: Translations }) {
 
   const steps = [
     { ...t.demo.step1, icon: stepIcons[0] },

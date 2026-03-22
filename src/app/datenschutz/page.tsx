@@ -1,8 +1,11 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "Datenschutzerklärung – 7Mountain Poker",
-  description: "Datenschutzerklärung für 7Mountain Poker Tournament Timer",
+  title: "Datenschutz | 7Mountain Poker – DSGVO-konform",
+  description: "Datenschutzerklärung für 7Mountain Poker. Keine Cookies, keine Tracking-Tools, alle Daten bleiben lokal im Browser. DSGVO-konform.",
+  alternates: {
+    canonical: "/datenschutz",
+  },
 };
 
 export default function DatenschutzPage() {

@@ -1,10 +1,7 @@
-"use client";
-
 import Link from "next/link";
-import { useLanguage } from "./LanguageContext";
+import type { Translations } from "./LanguageContext";
 
-export default function Footer() {
-  const { t } = useLanguage();
+export default function Footer({ t }: { t: Translations }) {
 
   return (
     <footer className="border-t border-border/30 bg-surface/20 py-12">

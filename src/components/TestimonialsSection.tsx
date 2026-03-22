@@ -1,10 +1,7 @@
-"use client";
-
-import { useLanguage } from "./LanguageContext";
+import type { Translations } from "./LanguageContext";
 import AnimatedSection from "./AnimatedSection";
 
-export default function TestimonialsSection() {
-  const { t } = useLanguage();
+export default function TestimonialsSection({ t }: { t: Translations }) {
 
   return (
     <section id="testimonials" className="py-24 sm:py-32 relative bg-gradient-to-b from-transparent via-surface/20 to-transparent">

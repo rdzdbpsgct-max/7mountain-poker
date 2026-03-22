@@ -1,6 +1,4 @@
-"use client";
-
-import { useLanguage } from "./LanguageContext";
+import type { Translations } from "./LanguageContext";
 import AnimatedSection from "./AnimatedSection";
 
 const toolIcons = {
@@ -76,8 +74,7 @@ const featureKeys = [
   "tournamentLog", "themes", "casting", "handForHand", "lateReg", "guidedTour",
 ] as const;
 
-export default function PowerToolsSection() {
-  const { t } = useLanguage();
+export default function PowerToolsSection({ t }: { t: Translations }) {
 
   return (
     <section id="power-tools" className="py-24 sm:py-32 relative bg-gradient-to-b from-transparent via-surface/20 to-transparent">

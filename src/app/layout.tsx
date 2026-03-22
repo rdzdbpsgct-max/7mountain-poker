@@ -11,9 +11,9 @@ const inter = Inter({
 const siteUrl = "https://7mountain-poker.vercel.app";
 
 export const metadata: Metadata = {
-  title: "7Mountain Poker - Tournament Timer",
+  title: "Kostenloser Poker Turnier Timer | 7Mountain Poker",
   description:
-    "Der ultimative Poker-Turnier-Timer. Blindstruktur, Spielerverwaltung, TV-Modus, Fernbedienung, Ligen und mehr. Kostenlos und ohne Anmeldung.",
+    "Kostenloser Poker Turnier Timer mit TV-Modus, Smartphone-Fernbedienung, Liga-System & 590 Sprachansagen. Blindstruktur, Spielerverwaltung, ICM-Rechner und mehr. Ohne Anmeldung sofort starten.",
   keywords: [
     "poker",
     "tournament",
@@ -26,33 +26,38 @@ export const metadata: Metadata = {
     "tv modus",
     "fernbedienung",
     "liga",
+    "poker turnier timer",
+    "poker timer app",
+    "poker turnier planen",
+    "icm rechner",
   ],
   metadataBase: new URL(siteUrl),
+  robots: {
+    index: true,
+    follow: true,
+  },
   alternates: {
     canonical: "/",
+    languages: {
+      "de": "/",
+      "en": "/",
+    },
   },
   openGraph: {
-    title: "7Mountain Poker - Tournament Timer",
+    title: "Kostenloser Poker Turnier Timer | 7Mountain Poker",
     description:
-      "Der ultimative Poker-Turnier-Timer. TV-Modus, Fernbedienung, Ligen, ICM-Rechner und mehr. Kostenlos und ohne Anmeldung.",
+      "Poker Turnier Timer mit TV-Modus, Fernbedienung, Ligen, ICM-Rechner & 590 Sprachansagen. Kostenlos und ohne Anmeldung.",
     type: "website",
     url: siteUrl,
     siteName: "7Mountain Poker",
-    images: [
-      {
-        url: "/og-image.png",
-        width: 1200,
-        height: 630,
-        alt: "7Mountain Poker - Tournament Timer",
-      },
-    ],
+    locale: "de_DE",
+    alternateLocale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
-    title: "7Mountain Poker - Tournament Timer",
+    title: "Kostenloser Poker Turnier Timer | 7Mountain Poker",
     description:
-      "Der ultimative Poker-Turnier-Timer. Kostenlos und ohne Anmeldung.",
-    images: ["/og-image.png"],
+      "Poker Turnier Timer mit TV-Modus, Fernbedienung, Ligen & 590 Sprachansagen. Kostenlos und ohne Anmeldung.",
   },
 };
 
@@ -82,7 +87,7 @@ export default function RootLayout({
       "Player Management",
       "TV Mode with 4 Layouts",
       "Smartphone Remote Control",
-      "468 Voice Announcements",
+      "590 Voice Announcements (DE + EN)",
       "League & Series Mode",
       "ICM Calculator",
       "Side Pot Calculator",
@@ -103,6 +108,9 @@ export default function RootLayout({
   return (
     <html lang="de" className={`${inter.variable} h-full antialiased`}>
       <head>
+        <link rel="alternate" hrefLang="de" href={siteUrl} />
+        <link rel="alternate" hrefLang="en" href={siteUrl} />
+        <link rel="alternate" hrefLang="x-default" href={siteUrl} />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: jsonLdString }}

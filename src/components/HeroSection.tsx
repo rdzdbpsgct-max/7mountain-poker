@@ -1,10 +1,7 @@
-"use client";
-
-import { useLanguage } from "./LanguageContext";
+import type { Translations } from "./LanguageContext";
 import ImageLightbox from "./ImageLightbox";
 
-export default function HeroSection() {
-  const { t } = useLanguage();
+export default function HeroSection({ t }: { t: Translations }) {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden poker-bg pt-28">

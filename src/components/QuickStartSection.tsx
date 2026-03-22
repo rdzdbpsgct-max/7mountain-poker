@@ -1,10 +1,7 @@
-"use client";
-
-import { useLanguage } from "./LanguageContext";
+import type { Translations } from "./LanguageContext";
 import AnimatedSection from "./AnimatedSection";
 
-export default function QuickStartSection() {
-  const { t } = useLanguage();
+export default function QuickStartSection({ t }: { t: Translations }) {
 
   const modes = [
     {
