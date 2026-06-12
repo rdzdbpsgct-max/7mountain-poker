@@ -74,19 +74,19 @@ export default function ProFeaturesSection({ t }: { t: Translations }) {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {features.map((feature, i) => (
             <AnimatedSection key={feature.title} delay={i * 100}>
-              <div className="group rounded-2xl border border-border/50 bg-surface/40 p-6 backdrop-blur-sm h-full relative overflow-hidden transition-all duration-300 hover:border-emerald/30 hover:-translate-y-1 hover:shadow-lg hover:shadow-emerald/10">
+              <div className="card-sheen group rounded-2xl border border-border/50 bg-surface/40 p-6 backdrop-blur-sm h-full relative overflow-hidden transition-all duration-300 hover:border-emerald/30 hover:-translate-y-1 hover:shadow-lg hover:shadow-emerald/10">
                 {/* Decorative Card Suit */}
-                <span className="absolute top-3 right-3 text-2xl text-emerald/5 group-hover:text-emerald/15 transition-colors duration-500 select-none">
+                <span aria-hidden="true" className="absolute top-3 right-3 text-2xl text-emerald/5 group-hover:text-emerald/15 transition-colors duration-500 select-none">
                   {cardSuits[i]}
                 </span>
 
                 {/* Icon */}
-                <div className="w-12 h-12 rounded-xl bg-emerald/10 border border-emerald/20 flex items-center justify-center mb-4 group-hover:bg-emerald/20 group-hover:scale-110 transition-all duration-300">
+                <div aria-hidden="true" className="w-12 h-12 rounded-xl bg-emerald/10 border border-emerald/20 flex items-center justify-center mb-4 group-hover:bg-emerald/20 group-hover:scale-110 group-hover:-rotate-3 transition-all duration-300">
                   {featureIcons[i]}
                 </div>
 
                 {/* Title */}
-                <h3 className="text-lg font-bold text-foreground mb-2 group-hover:text-emerald transition-colors duration-300">
+                <h3 className="text-lg font-bold text-foreground mb-2 group-hover:text-emerald-bright transition-colors duration-300">
                   {feature.title}
                 </h3>
 

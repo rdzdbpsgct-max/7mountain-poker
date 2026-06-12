@@ -1,14 +1,30 @@
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import type { Metadata, Viewport } from "next";
+import { Bricolage_Grotesque, Instrument_Sans, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({
-  variable: "--font-geist-sans",
+const fontDisplay = Bricolage_Grotesque({
+  variable: "--font-bricolage",
   subsets: ["latin"],
   display: "swap",
 });
 
-const siteUrl = "https://7mountain-poker.vercel.app";
+const fontBody = Instrument_Sans({
+  variable: "--font-instrument",
+  subsets: ["latin"],
+  display: "swap",
+});
+
+const fontMono = JetBrains_Mono({
+  variable: "--font-jetbrains",
+  subsets: ["latin"],
+  display: "swap",
+});
+
+const siteUrl = "https://7mountain-poker-webseite.vercel.app";
+
+export const viewport: Viewport = {
+  themeColor: "#0a1118",
+};
 
 export const metadata: Metadata = {
   title: "Kostenloser Poker Turnier Timer | 7Mountain Poker",
@@ -126,7 +142,7 @@ export default function RootLayout({
   const jsonLdString = JSON.stringify(jsonLd);
 
   return (
-    <html lang="de" className={`${inter.variable} h-full antialiased`}>
+    <html lang="de" className={`${fontDisplay.variable} ${fontBody.variable} ${fontMono.variable} h-full antialiased`}>
       <head>
         <link rel="alternate" hrefLang="de" href={siteUrl} />
         <link rel="alternate" hrefLang="en" href={siteUrl} />

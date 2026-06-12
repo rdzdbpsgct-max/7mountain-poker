@@ -10,11 +10,11 @@ export default function Footer({ t }: { t: Translations }) {
           {/* Brand */}
           <div>
             <div className="text-lg font-bold text-foreground mb-2">
-              <span>♠</span>{" "}
-              <span>♥</span>{" "}
-              7Mountain Poker{" "}
-              <span>♦</span>{" "}
-              <span>♣</span>
+              <span aria-hidden="true">♠</span>{" "}
+              <span aria-hidden="true">♥</span>{" "}
+              <span className="font-display font-black tracking-tight">7Mountain Poker</span>{" "}
+              <span aria-hidden="true">♦</span>{" "}
+              <span aria-hidden="true">♣</span>
             </div>
             <p className="text-sm text-muted">{t.footer.tagline}</p>
           </div>
@@ -57,7 +57,7 @@ export default function Footer({ t }: { t: Translations }) {
           {/* Feature pages */}
           <div>
             <h4 className="text-xs font-bold tracking-[0.15em] text-muted uppercase mb-4">
-              Features
+              {t.footer.featurePages}
             </h4>
             <ul className="space-y-2">
               <li><Link href="/features/tv-modus" className="text-sm text-muted hover:text-foreground transition-colors">TV-Modus</Link></li>
@@ -98,7 +98,7 @@ export default function Footer({ t }: { t: Translations }) {
         {/* Bottom bar */}
         <div className="mt-12 pt-8 border-t border-border/20 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-xs text-muted">{t.footer.copyright}</p>
-          <div className="flex items-center gap-2 text-muted/40 text-lg">
+          <div aria-hidden="true" className="flex items-center gap-2 text-muted/40 text-lg">
             <span>♠</span>
             <span>♥</span>
             <span>♦</span>

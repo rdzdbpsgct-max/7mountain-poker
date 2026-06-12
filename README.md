@@ -2,13 +2,14 @@
 
 Marketing- und Landing-Page für den [7Mountain Poker Tournament Timer](https://7mountainpoker.vercel.app).
 
-**Live:** https://7mountain-poker.vercel.app
+**Live:** https://7mountain-poker-webseite.vercel.app
 
 ## Tech Stack
 
 - **Framework:** Next.js 16.2 (App Router, Turbopack, static prerendering)
-- **Styling:** Tailwind CSS 4, custom dark poker theme
-- **Animations:** Framer Motion, CSS IntersectionObserver scroll animations
+- **Styling:** Tailwind CSS 4, custom dark poker theme ("Midnight Felt")
+- **Typography:** Bricolage Grotesque (Display), Instrument Sans (Body), JetBrains Mono (Zahlen/Badges) via next/font
+- **Animations:** CSS-Keyframes + IntersectionObserver Scroll-Animationen (keine JS-Animationsbibliothek)
 - **Language:** TypeScript, bilingual (DE/EN) with runtime i18n
 - **Hosting:** Vercel (auto-deploy via GitHub)
 - **OG Image:** Dynamic Edge-generated Open Graph image

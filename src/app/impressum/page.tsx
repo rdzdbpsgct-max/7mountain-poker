@@ -62,7 +62,7 @@ export default function ImpressumPage() {
           </p>
           <p className="mt-3">
             Webapp: <a href="https://7mountainpoker.vercel.app" target="_blank" rel="noopener noreferrer" className="text-emerald hover:underline">7mountainpoker.vercel.app</a><br />
-            Website: <a href="https://7mountain-poker.vercel.app" target="_blank" rel="noopener noreferrer" className="text-emerald hover:underline">7mountain-poker.vercel.app</a>
+            Website: <a href="https://7mountain-poker-webseite.vercel.app" target="_blank" rel="noopener noreferrer" className="text-emerald hover:underline">7mountain-poker-webseite.vercel.app</a>
           </p>
         </Section>
 

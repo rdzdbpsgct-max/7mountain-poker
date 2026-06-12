@@ -5,21 +5,22 @@
 ## Project Overview
 Marketing landing page and content hub for the 7Mountain Poker Tournament Timer webapp.
 
-- **Website (this project):** https://7mountain-poker.vercel.app
+- **Website (this project):** https://7mountain-poker-webseite.vercel.app
 - **Webapp:** https://7mountainpoker.vercel.app
 - **GitHub:** https://github.com/rdzdbpsgct-max/7mountain-poker
 - **Contact:** sevenmountainpoker@icloud.com
 
 ## Tech Stack
 - **Framework:** Next.js 16.2 (App Router, Turbopack, static prerendering)
-- **Styling:** Tailwind CSS 4, custom dark poker theme
-- **Animations:** Framer Motion, CSS IntersectionObserver scroll animations
+- **Styling:** Tailwind CSS 4, custom dark poker theme ("Midnight Felt")
+- **Typography:** Bricolage Grotesque (display), Instrument Sans (body), JetBrains Mono (numbers/badges) via next/font
+- **Animations:** CSS keyframes + IntersectionObserver scroll animations (no JS animation library)
 - **Language:** TypeScript, bilingual (DE/EN) with runtime i18n
 - **Hosting:** Vercel (auto-deploy on push to main)
 - **OG Image:** Dynamic Edge-generated Open Graph image
 
 ## Key Conventions
-- Dark poker theme: background #0f1923, emerald #10b981 accent, gold #f59e0b secondary
+- Dark poker theme: background #0a1118, emerald #10b981 accent, gold #f59e0b secondary
 - All text content in `src/lib/i18n.ts` (bilingual DE/EN)
 - Components use `useLanguage()` hook from LanguageContext
 - Screenshots of the real webapp stored in `public/screenshots/`
@@ -110,6 +111,7 @@ src/
     ImageLightbox.tsx           # Click-to-zoom with React Portal
     AnimatedSection.tsx         # IntersectionObserver scroll animations
     LanguageContext.tsx          # React Context for DE/EN switching
+    LocaleSwitch.tsx            # Shared DE/EN segmented switch (Navigation + SubpageHeader)
     BreadcrumbJsonLd.tsx        # Shared BreadcrumbList JSON-LD component
   lib/
     i18n.ts                     # All translations (DE + EN, ~450 keys)

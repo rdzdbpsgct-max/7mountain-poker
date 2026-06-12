@@ -1,4 +1,4 @@
-const siteUrl = "https://7mountain-poker.vercel.app";
+const siteUrl = "https://7mountain-poker-webseite.vercel.app";
 
 interface BreadcrumbItem {
   name: string;

@@ -22,10 +22,10 @@ export default function TVRemoteSection({ t }: { t: Translations }) {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
           {/* LEFT COLUMN - TV Mode */}
           <AnimatedSection>
-            <div className="rounded-2xl border border-border/50 bg-surface/50 overflow-hidden">
+            <div className="card-sheen rounded-2xl border border-border/50 bg-surface/50 overflow-hidden">
               {/* TV Bezel Top */}
               <div className="flex items-center gap-2 px-3 py-2 bg-surface/80">
-                <div className="w-2 h-2 rounded-full bg-red-500 animate-pulse" />
+                <div aria-hidden="true" className="w-2 h-2 rounded-full bg-red-accent animate-pulse" />
                 <span className="text-[10px] text-muted/60 uppercase tracking-wider">
                   {t.tvRemote.tv.title}
                 </span>
@@ -69,9 +69,9 @@ export default function TVRemoteSection({ t }: { t: Translations }) {
           {/* RIGHT COLUMN - Remote Control */}
           <AnimatedSection delay={200}>
             {/* Phone Mockup with Real Screenshot */}
-            <div className="mx-auto max-w-[260px] rounded-[2.5rem] border-2 border-border/60 bg-surface/60 p-3 overflow-hidden shadow-xl">
+            <div className="card-sheen mx-auto max-w-[240px] sm:max-w-[280px] rounded-[2.5rem] border-2 border-border-strong/70 bg-surface/60 p-3 overflow-hidden shadow-xl shadow-black/40">
               {/* Phone Notch */}
-              <div className="w-20 h-1 bg-border/40 rounded-full mx-auto mb-2" />
+              <div aria-hidden="true" className="w-20 h-1 bg-border/40 rounded-full mx-auto mb-2" />
 
               {/* Real Screenshot */}
               <ImageLightbox
@@ -86,7 +86,7 @@ export default function TVRemoteSection({ t }: { t: Translations }) {
             {/* QR Code Hint */}
             <div className="flex items-center justify-center gap-2 mt-4">
               {/* CSS QR Icon */}
-              <div className="grid grid-cols-3 gap-0.5 w-5 h-5">
+              <div aria-hidden="true" className="grid grid-cols-3 gap-0.5 w-5 h-5">
                 {[...Array(9)].map((_, i) => (
                   <div
                     key={i}

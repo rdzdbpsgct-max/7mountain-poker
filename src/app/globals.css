@@ -1,20 +1,33 @@
 @import "tailwindcss";
 
 @theme inline {
-  --color-background: #0f1923;
-  --color-foreground: #f1f5f9;
-  --color-surface: #1e2d3d;
-  --color-surface-hover: #263a4d;
+  /* Surfaces — deep card-room green-black, layered */
+  --color-background: #0a1118;
+  --color-background-deep: #070c11;
+  --color-foreground: #f2f7f4;
+  --color-surface: #101c26;
+  --color-surface-2: #15232f;
+  --color-surface-hover: #1b2d3b;
+
+  /* Brand */
   --color-emerald: #10b981;
+  --color-emerald-bright: #34d399;
   --color-emerald-dark: #059669;
   --color-emerald-glow: rgba(16, 185, 129, 0.3);
   --color-gold: #f59e0b;
+  --color-gold-bright: #fbbf24;
   --color-gold-glow: rgba(245, 158, 11, 0.2);
   --color-red-accent: #ef4444;
-  --color-muted: #94a3b8;
-  --color-border: #2d3f52;
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+
+  /* Lines & text */
+  --color-muted: #93a7b3;
+  --color-border: #21333f;
+  --color-border-strong: #2e4452;
+
+  /* Typography */
+  --font-sans: var(--font-instrument);
+  --font-display: var(--font-bricolage);
+  --font-mono: var(--font-jetbrains);
 }
 
 html {
@@ -22,18 +35,64 @@ html {
 }
 
 body {
-  background: var(--color-background);
+  background:
+    radial-gradient(ellipse 120% 60% at 50% -10%, rgba(16, 185, 129, 0.07) 0%, transparent 60%),
+    var(--color-background);
   color: var(--color-foreground);
-  font-family: var(--font-sans), system-ui, sans-serif;
+  font-family: var(--font-instrument), system-ui, sans-serif;
+  font-feature-settings: "ss01";
+}
+
+@layer base {
+  h1, h2, h3, h4 {
+    font-family: var(--font-bricolage), var(--font-instrument), system-ui, sans-serif;
+    letter-spacing: -0.02em;
+    text-wrap: balance;
+  }
+
+  ::selection {
+    background: rgba(16, 185, 129, 0.35);
+    color: #f2f7f4;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-emerald);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
 }
 
 /* Emerald glow effect for buttons */
 .glow-emerald {
-  box-shadow: 0 0 20px rgba(16, 185, 129, 0.4), 0 0 60px rgba(16, 185, 129, 0.1);
+  box-shadow:
+    0 0 20px rgba(16, 185, 129, 0.35),
+    0 0 60px rgba(16, 185, 129, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.18);
 }
 
 .glow-emerald:hover {
-  box-shadow: 0 0 30px rgba(16, 185, 129, 0.6), 0 0 80px rgba(16, 185, 129, 0.2);
+  box-shadow:
+    0 0 30px rgba(16, 185, 129, 0.55),
+    0 0 80px rgba(16, 185, 129, 0.18),
+    inset 0 1px 0 rgba(255, 255, 255, 0.22);
+}
+
+/* Shine sweep on primary buttons */
+.btn-shine {
+  position: relative;
+  overflow: hidden;
+}
+.btn-shine::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(115deg, transparent 30%, rgba(255, 255, 255, 0.25) 50%, transparent 70%);
+  transform: translateX(-110%);
+  transition: transform 0.6s ease;
+  pointer-events: none;
+}
+.btn-shine:hover::after {
+  transform: translateX(110%);
 }
 
 /* Subtle card glow on hover */
@@ -41,20 +100,37 @@ body {
   box-shadow: 0 0 30px rgba(16, 185, 129, 0.15), 0 4px 20px rgba(0, 0, 0, 0.3);
 }
 
+/* Card baseline: top sheen + soft depth */
+.card-sheen {
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.045),
+    0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
 /* Gradient text */
 .text-gradient {
-  background: linear-gradient(135deg, #10b981, #34d399, #f59e0b);
+  background: linear-gradient(120deg, #34d399 0%, #10b981 45%, #f59e0b 110%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
+/* Film grain — adds texture to large dark areas */
+.bg-noise::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.5;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3CfeComponentTransfer%3E%3CfeFuncA type='linear' slope='0.05'/%3E%3C/feComponentTransfer%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
 /* Background pattern - subtle poker felt texture */
 .poker-bg {
   background-image:
-    radial-gradient(ellipse at 20% 50%, rgba(16, 185, 129, 0.05) 0%, transparent 50%),
-    radial-gradient(ellipse at 80% 20%, rgba(245, 158, 11, 0.03) 0%, transparent 50%),
-    radial-gradient(ellipse at 50% 100%, rgba(16, 185, 129, 0.03) 0%, transparent 50%);
+    radial-gradient(ellipse at 20% 50%, rgba(16, 185, 129, 0.06) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 20%, rgba(245, 158, 11, 0.04) 0%, transparent 50%),
+    radial-gradient(ellipse at 50% 100%, rgba(16, 185, 129, 0.04) 0%, transparent 50%);
 }
 
 /* Floating card suits animation */
@@ -70,7 +146,7 @@ body {
 /* Poker felt texture for sections */
 .poker-felt {
   background-image:
-    radial-gradient(ellipse at 50% 50%, rgba(16, 185, 129, 0.03) 0%, transparent 70%);
+    radial-gradient(ellipse at 50% 50%, rgba(16, 185, 129, 0.035) 0%, transparent 70%);
 }
 
 /* Decorative poker chip */
@@ -112,7 +188,7 @@ body {
 }
 
 .animate-fade-in-up {
-  animation: fadeInUp 0.7s ease-out forwards;
+  animation: fadeInUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
   opacity: 0;
 }
 
@@ -140,4 +216,22 @@ body {
 }
 ::-webkit-scrollbar-thumb:hover {
   background: var(--color-muted);
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  .animate-fade-in-up {
+    animation: none;
+    opacity: 1;
+  }
 }

@@ -19,6 +19,12 @@ export const translations = {
       cta: "Turnier starten",
       ctaSecondary: "Features entdecken",
       badge: "Kostenlos & ohne Anmeldung",
+      stats: [
+        { value: "590+", label: "Sprachansagen" },
+        { value: "20+", label: "Profi-Tools" },
+        { value: "100%", label: "Kostenlos" },
+        { value: "PWA", label: "Offline-fähig" },
+      ],
     },
     features: {
       label: "FEATURES",
@@ -26,6 +32,7 @@ export const translations = {
       subtitle:
         "Von der schnellen Runde mit Freunden bis zum Liga-Turnier \u2014 7Mountain Poker hat dich abgedeckt.",
       advancedLabel: "ERWEITERTE FEATURES",
+      learnMore: "Mehr erfahren",
       timer: {
         title: "Turnier-Timer",
         description:
@@ -215,6 +222,7 @@ export const translations = {
       subtitle:
         "W\u00e4hle einen Modus und starte sofort \u2014 keine Konfiguration n\u00f6tig.",
       startDirect: "Direkt starten",
+      popular: "BELIEBT",
       turbo: {
         title: "Turbo",
         duration: "~1 Stunde",
@@ -272,6 +280,7 @@ export const translations = {
     footer: {
       tagline: "Der professionelle Poker-Turnier-Timer.",
       product: "Produkt",
+      featurePages: "Features",
       legal: "Rechtliches",
       links: {
         features: "Features",
@@ -301,6 +310,12 @@ export const translations = {
       cta: "Start tournament",
       ctaSecondary: "Discover features",
       badge: "Free & no signup required",
+      stats: [
+        { value: "590+", label: "Voice announcements" },
+        { value: "20+", label: "Pro tools" },
+        { value: "100%", label: "Free" },
+        { value: "PWA", label: "Works offline" },
+      ],
     },
     features: {
       label: "FEATURES",
@@ -308,6 +323,7 @@ export const translations = {
       subtitle:
         "From a quick round with friends to a league tournament \u2014 7Mountain Poker has you covered.",
       advancedLabel: "ADVANCED FEATURES",
+      learnMore: "Learn more",
       timer: {
         title: "Tournament Timer",
         description:
@@ -496,6 +512,7 @@ export const translations = {
       title: "Ready in 30 seconds",
       subtitle: "Choose a mode and start immediately \u2014 no setup needed.",
       startDirect: "Start now",
+      popular: "POPULAR",
       turbo: {
         title: "Turbo",
         duration: "~1 hour",
@@ -549,6 +566,7 @@ export const translations = {
     footer: {
       tagline: "The professional poker tournament timer.",
       product: "Product",
+      featurePages: "Features",
       legal: "Legal",
       links: {
         features: "Features",

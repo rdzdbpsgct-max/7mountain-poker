@@ -1,23 +1,23 @@
 "use client";
 
-import { useState, useEffect, useCallback } from "react";
+import { useState, useCallback } from "react";
 
 export type Locale = "de" | "en";
 
 const STORAGE_KEY = "7mp-locale";
 
 export function useLocale() {
-  const [locale, setLocaleState] = useState<Locale>("de");
-
-  // Read from localStorage on mount
-  useEffect(() => {
-    try {
-      const stored = localStorage.getItem(STORAGE_KEY);
-      if (stored === "en") setLocaleState("en");
-    } catch {
-      // Private browsing or localStorage unavailable
+  // Lazy init from localStorage — same pattern as LanguageContext
+  const [locale, setLocaleState] = useState<Locale>(() => {
+    if (typeof window !== "undefined") {
+      try {
+        if (localStorage.getItem(STORAGE_KEY) === "en") return "en";
+      } catch {
+        // Private browsing or localStorage unavailable
+      }
     }
-  }, []);
+    return "de";
+  });
 
   const setLocale = useCallback((l: Locale) => {
     setLocaleState(l);

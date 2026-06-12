@@ -46,19 +46,19 @@ export default function QuickStartSection({ t }: { t: Translations }) {
                 href="https://7mountainpoker.vercel.app"
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`group relative block rounded-2xl border ${mode.borderColor} bg-gradient-to-b ${mode.color} p-8 transition-all duration-300 card-glow cursor-pointer hover:-translate-y-1.5 hover:scale-[1.02] ${
+                className={`card-sheen group relative block rounded-2xl border ${mode.borderColor} bg-gradient-to-b ${mode.color} p-8 transition-all duration-300 card-glow cursor-pointer hover:-translate-y-1.5 hover:scale-[1.02] ${
                   mode.featured ? "md:-mt-4 md:mb-4 ring-1 ring-gold/20" : ""
                 }`}
               >
                 {mode.featured && (
-                  <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-1 rounded-full bg-gold text-background text-xs font-bold">
-                    POPULAR
+                  <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-1 rounded-full bg-gold font-mono text-background text-xs font-bold tracking-wider">
+                    {t.quickStart.popular}
                   </div>
                 )}
-                <div className="text-4xl mb-4">{mode.icon}</div>
+                <div aria-hidden="true" className="text-4xl mb-4">{mode.icon}</div>
                 <h3 className={`text-2xl font-black ${mode.accent} mb-2`}>{mode.title}</h3>
-                <p className="text-3xl font-bold text-foreground mb-1">{mode.duration}</p>
-                <p className="text-sm text-muted mb-4">{mode.details}</p>
+                <p className="font-mono text-3xl font-bold text-foreground mb-1">{mode.duration}</p>
+                <p className="font-mono text-sm text-muted mb-4">{mode.details}</p>
                 <p className="text-muted text-sm">{mode.description}</p>
                 <div className={`mt-6 inline-flex items-center gap-2 ${mode.accent} font-semibold text-sm group-hover:gap-3 transition-all`}>
                   {t.quickStart.startDirect}

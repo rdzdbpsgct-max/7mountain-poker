@@ -33,16 +33,16 @@ export default function DemoSection({ t }: { t: Translations }) {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
           {steps.map((step, i) => (
             <AnimatedSection key={step.title} delay={i * 150} className="relative text-center">
-              <div className="relative mx-auto mb-6">
-                <div className="inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-emerald/10 border border-emerald/20 text-emerald">
+              <div className="relative mx-auto mb-6 inline-block">
+                <div aria-hidden="true" className="card-sheen inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-emerald/10 border border-emerald/20 text-emerald">
                   {step.icon}
                 </div>
-                <div className="absolute -top-2 -right-2 w-8 h-8 rounded-full bg-emerald text-white text-sm font-bold flex items-center justify-center">
+                <div aria-hidden="true" className="absolute -top-2 -right-2 w-8 h-8 rounded-full bg-emerald text-background font-mono text-sm font-bold flex items-center justify-center shadow-[0_0_12px_rgba(16,185,129,0.4)]">
                   {i + 1}
                 </div>
               </div>
               {i < 2 && (
-                <div className="hidden md:block absolute top-10 left-[60%] w-[80%] h-px bg-gradient-to-r from-emerald/30 to-transparent" />
+                <div aria-hidden="true" className="hidden md:block absolute top-10 left-[60%] w-[80%] h-px bg-gradient-to-r from-emerald/30 to-transparent" />
               )}
               <h3 className="text-xl font-bold text-foreground mb-3">{step.title}</h3>
               <p className="text-muted leading-relaxed">{step.description}</p>

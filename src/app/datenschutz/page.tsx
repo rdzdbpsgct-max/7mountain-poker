@@ -31,7 +31,7 @@ export default function DatenschutzPage() {
       {/* Content */}
       <main className="mx-auto max-w-3xl px-4 py-12">
         <h1 className="text-3xl sm:text-4xl font-black text-foreground mb-2">Datenschutzerklärung</h1>
-        <p className="text-muted mb-10">Stand: März 2026 · Gültig für 7mountain-poker.vercel.app &amp; 7mountainpoker.vercel.app</p>
+        <p className="text-muted mb-10">Stand: März 2026 · Gültig für 7mountain-poker-webseite.vercel.app &amp; 7mountainpoker.vercel.app</p>
 
         <Section title="1. Überblick">
           <p>

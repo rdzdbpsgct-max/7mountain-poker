@@ -45,26 +45,26 @@ const featureIcons = {
   ),
 };
 
-function FeatureCard({ title, description, icon, href }: { title: string; description: string; icon: React.ReactNode; href?: string }) {
+function FeatureCard({ title, description, icon, href, learnMore }: { title: string; description: string; icon: React.ReactNode; href?: string; learnMore: string }) {
   const content = (
-    <div className="group relative rounded-2xl border border-border/50 bg-surface/50 p-6 transition-all duration-300 hover:border-emerald/30 hover:-translate-y-1 hover:shadow-lg hover:shadow-emerald/10 card-glow backdrop-blur-sm h-full">
-      <div className="mb-4 inline-flex items-center justify-center w-14 h-14 rounded-xl bg-emerald/10 border border-emerald/20 group-hover:bg-emerald/20 group-hover:scale-110 transition-all duration-300">
+    <div className="card-sheen group relative rounded-2xl border border-border/50 bg-surface/50 p-6 transition-all duration-300 hover:border-emerald/30 hover:-translate-y-1 hover:shadow-lg hover:shadow-emerald/10 card-glow backdrop-blur-sm h-full">
+      <div aria-hidden="true" className="mb-4 inline-flex items-center justify-center w-14 h-14 rounded-xl bg-emerald/10 border border-emerald/20 group-hover:bg-emerald/20 group-hover:scale-110 group-hover:-rotate-3 transition-all duration-300">
         {icon}
       </div>
-      <h3 className="text-lg font-bold text-foreground mb-2 group-hover:text-emerald transition-colors duration-300">{title}</h3>
+      <h3 className="text-lg font-bold text-foreground mb-2 group-hover:text-emerald-bright transition-colors duration-300">{title}</h3>
       <p className="text-sm text-muted leading-relaxed">{description}</p>
       {href && (
-        <span className="mt-3 inline-flex items-center gap-1 text-xs text-emerald/70 group-hover:text-emerald transition-colors">
-          Mehr erfahren
-          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="2"><path d="M4 2l4 4-4 4" /></svg>
+        <span className="mt-3 inline-flex items-center gap-1 text-xs font-semibold uppercase tracking-wide text-emerald/70 group-hover:text-emerald transition-colors">
+          {learnMore}
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true" className="transition-transform duration-300 group-hover:translate-x-0.5"><path d="M4 2l4 4-4 4" /></svg>
         </span>
       )}
-      <div className="absolute bottom-0 left-6 right-6 h-px bg-gradient-to-r from-transparent via-emerald/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+      <div aria-hidden="true" className="absolute bottom-0 left-6 right-6 h-px bg-gradient-to-r from-transparent via-emerald/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
     </div>
   );
 
   if (href) {
-    return <Link href={href} className="block h-full">{content}</Link>;
+    return <Link href={href} className="block h-full rounded-2xl">{content}</Link>;
   }
   return content;
 }
@@ -97,7 +97,7 @@ export default function FeaturesSection({ t }: { t: Translations }) {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {coreFeatures.map((feature, i) => (
             <AnimatedSection key={feature.title} delay={i * 100}>
-              <FeatureCard title={feature.title} description={feature.description} icon={feature.icon} href={feature.href} />
+              <FeatureCard title={feature.title} description={feature.description} icon={feature.icon} href={feature.href} learnMore={t.features.learnMore} />
             </AnimatedSection>
           ))}
 
@@ -110,7 +110,7 @@ export default function FeaturesSection({ t }: { t: Translations }) {
 
           {advancedFeatures.map((feature, i) => (
             <AnimatedSection key={feature.title} delay={i * 100}>
-              <FeatureCard title={feature.title} description={feature.description} icon={feature.icon} href={feature.href} />
+              <FeatureCard title={feature.title} description={feature.description} icon={feature.icon} href={feature.href} learnMore={t.features.learnMore} />
             </AnimatedSection>
           ))}
         </div>

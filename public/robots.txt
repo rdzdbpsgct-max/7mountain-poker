@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://7mountain-poker.vercel.app/sitemap.xml
+Sitemap: https://7mountain-poker-webseite.vercel.app/sitemap.xml
