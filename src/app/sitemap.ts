@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 
-const siteUrl = "https://7mountain-poker-webseite.vercel.app";
+const siteUrl = "https://7mountain-poker.vercel.app";
 const lastMod = new Date("2026-03-22");
 
 // Feature pages with their paths

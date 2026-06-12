@@ -5,7 +5,7 @@
 ## Project Overview
 Marketing landing page and content hub for the 7Mountain Poker Tournament Timer webapp.
 
-- **Website (this project):** https://7mountain-poker-webseite.vercel.app
+- **Website (this project):** https://7mountain-poker.vercel.app
 - **Webapp:** https://7mountainpoker.vercel.app
 - **GitHub:** https://github.com/rdzdbpsgct-max/7mountain-poker
 - **Contact:** sevenmountainpoker@icloud.com

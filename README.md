@@ -2,7 +2,7 @@
 
 Marketing- und Landing-Page für den [7Mountain Poker Tournament Timer](https://7mountainpoker.vercel.app).
 
-**Live:** https://7mountain-poker-webseite.vercel.app
+**Live:** https://7mountain-poker.vercel.app
 
 ## Tech Stack
 

@@ -20,7 +20,7 @@ const fontMono = JetBrains_Mono({
   display: "swap",
 });
 
-const siteUrl = "https://7mountain-poker-webseite.vercel.app";
+const siteUrl = "https://7mountain-poker.vercel.app";
 
 export const viewport: Viewport = {
   themeColor: "#0a1118",
